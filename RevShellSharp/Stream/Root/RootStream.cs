@@ -4,13 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RevShellSharp
+namespace RevShellSharp.Stream.Root
 {
-    class Program
+    class RootStream
     {
-        static void Main(string[] args)
-        {
-
-        }
     }
 }
