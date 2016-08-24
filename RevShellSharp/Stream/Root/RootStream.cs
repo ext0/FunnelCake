@@ -1,12 +1,34 @@
-﻿using System;
+﻿using FunnelCake.Funnels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
-namespace RevShellSharp.Stream.Root
+namespace FunnelCake.Stream.Root
 {
-    class RootStream
+    public class RootStream
     {
+        private static int BUFFER_SIZE = 1024;
+
+        private byte[] _loadBuffer;
+        private TCPConnection _connection;
+        private NetworkStream _stream;
+        private Dictionary<MappedFunnel, LinkedList<StreamBlock>> _queue;
+        public RootStream(TCPConnection connection)
+        {
+            _connection = connection;
+            _stream = _connection.Stream;
+            _queue = new Dictionary<MappedFunnel, LinkedList<StreamBlock>>();
+            _loadBuffer = new byte[BUFFER_SIZE];
+        }
+        public void Bootstrap()
+        {
+            ThreadPool.QueueUserWorkItem(delegate {
+
+            });
+        }
     }
 }

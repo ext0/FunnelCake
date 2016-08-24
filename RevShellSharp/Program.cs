@@ -1,16 +1,17 @@
-﻿using System;
+﻿using FunnelCake.Stream.Parser;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RevShellSharp
+namespace FunnelCake
 {
     class Program
     {
         static void Main(string[] args)
         {
-
+            Console.ReadKey();
         }
     }
 }
