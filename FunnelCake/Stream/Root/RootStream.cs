@@ -17,6 +17,14 @@ namespace FunnelCake.Stream.Root
         private TCPConnection _connection;
         private NetworkStream _stream;
         private Dictionary<MappedFunnel, LinkedList<StreamBlock>> _queue;
+        private bool ALive
+        {
+            get
+            {
+                return _connection.Stream.Ca
+            }
+        }
+
         public RootStream(TCPConnection connection)
         {
             _connection = connection;

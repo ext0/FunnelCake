@@ -15,6 +15,6 @@ namespace FunnelCake.Stream
         RAW = 1 << 4,
         PRIORITY = 1 << 5,
         CACHEABLE = 1 << 6,
-        RESERVED = 1 << 7
+        KEEPALIVE = 1 << 7
     }
 }
